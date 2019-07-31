@@ -123,11 +123,7 @@ public class RippleAdjuster extends SuperTextView.Adjuster {
     dstCanvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);
     dstCanvas.drawCircle(x, y, radius * density, paint);
     // 创建一个图层，在图层上演示图形混合后的效果
-    int sc = canvas.saveLayer(0, 0, width, height, null, Canvas.MATRIX_SAVE_FLAG |
-      Canvas.CLIP_SAVE_FLAG |
-      Canvas.HAS_ALPHA_LAYER_SAVE_FLAG |
-      Canvas.FULL_COLOR_LAYER_SAVE_FLAG |
-      Canvas.CLIP_TO_LAYER_SAVE_FLAG);
+    int sc = canvas.saveLayer(0, 0, width, height, null, Canvas.ALL_SAVE_FLAG);
 
     canvas.drawBitmap(src, 0, 0, paint);
     paint.setXfermode(xfermode);
