@@ -78,4 +78,11 @@
     <attr name="stv_pressBgColor" format="reference|color"/>
     <attr name="stv_pressTextColor" format="reference|color"/>
   </declare-styleable>
+
+  <declare-styleable name="ExSuperTextView">
+    <attr name="estv_background" format="string"/>
+    <attr name="estv_background_index" format="integer"/>
+    <attr name="estv_textColor" format="string"/>
+    <attr name="estv_textColor_index" format="integer"/>
+  </declare-styleable>
 </resources>
